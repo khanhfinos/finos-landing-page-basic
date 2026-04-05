@@ -1,11 +1,18 @@
 import type { Metadata } from "next";
-import { Space_Grotesk } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
+import { FloatingChatWidget } from "@/components/ui/floating-chat-widget-shadcnui";
 
-const spaceGrotesk = Space_Grotesk({
+const spaceGrotesk = localFont({
   variable: "--font-space-grotesk",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
+  src: [
+    { path: "../../public/fonts/SpaceGrotesk-Light.ttf", weight: "300", style: "normal" },
+    { path: "../../public/fonts/SpaceGrotesk-Regular.ttf", weight: "400", style: "normal" },
+    { path: "../../public/fonts/SpaceGrotesk-Medium.ttf", weight: "500", style: "normal" },
+    { path: "../../public/fonts/SpaceGrotesk-SemiBold.ttf", weight: "600", style: "normal" },
+    { path: "../../public/fonts/SpaceGrotesk-Bold.ttf", weight: "700", style: "normal" },
+  ],
 });
 
 export const metadata: Metadata = {
@@ -21,7 +28,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="vi" className={`${spaceGrotesk.variable} antialiased`}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <FloatingChatWidget />
+      </body>
     </html>
   );
 }
