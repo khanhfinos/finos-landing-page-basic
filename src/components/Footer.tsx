@@ -1,117 +1,83 @@
 import Link from "next/link";
 
+const menuItems = [
+  {
+    title: "Về chúng tôi",
+    links: [
+      { text: "Giới thiệu FinOS", url: "/about" },
+      { text: "Liên hệ", url: "/contact" },
+    ],
+  },
+  {
+    title: "Sản phẩm",
+    links: [
+      { text: "Credit Scoring", url: "#credit-scoring" },
+      { text: "Micro-Lending", url: "#micro-lending" },
+      { text: "Micro-Investment", url: "#micro-investment" },
+      { text: "eTMS", url: "#etms" },
+      { text: "eKYC", url: "#ekyc" },
+      { text: "eSignSuite", url: "#esignsuite" },
+    ],
+  },
+  {
+    title: "Pháp lý",
+    links: [
+      { text: "Chính sách quyền riêng tư", url: "#" },
+      { text: "Điều khoản chung", url: "#" },
+      { text: "Điều khoản cấp phép API", url: "#" },
+      { text: "Điều khoản cấp phép SDK", url: "#" },
+    ],
+  },
+  {
+    title: "Mạng xã hội",
+    links: [
+      { text: "LinkedIn", url: "#" },
+      { text: "Facebook", url: "#" },
+      { text: "YouTube", url: "#" },
+    ],
+  },
+];
+
+const bottomLinks = [
+  { text: "Điều khoản chung", url: "#" },
+  { text: "Chính sách quyền riêng tư", url: "#" },
+];
+
 export default function Footer() {
   return (
     <footer id="contact" className="bg-primary-dark text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
-          {/* Brand */}
-          <div>
-            <h3 className="text-2xl font-bold mb-4">FinOS</h3>
-            <p className="text-white/60 text-sm leading-relaxed">
-              FinOS là công ty FinTech cung cấp năng lực cho các sản phẩm &amp;
-              dịch vụ tài chính kỹ thuật số tại Đông Nam Á
+        <div className="grid grid-cols-2 gap-8 lg:grid-cols-6">
+          <div className="col-span-2 mb-8 lg:mb-0">
+            <p className="text-2xl font-bold">FinOS</p>
+            <p className="mt-4 text-white/60 text-sm leading-relaxed max-w-xs">
+              FinOS là công ty FinTech cung cấp năng lực cho các sản phẩm &amp; dịch vụ tài chính kỹ thuật số tại Đông Nam Á.
             </p>
           </div>
 
-          {/* About Us */}
-          <div>
-            <h4 className="font-semibold text-lg mb-4">Về chúng tôi</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="/about"
-                  className="text-white/60 hover:text-white text-sm transition-colors"
-                >
-                  Giới thiệu FinOS
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#contact"
-                  className="text-white/60 hover:text-white text-sm transition-colors"
-                >
-                  Liên hệ
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Our Services */}
-          <div>
-            <h4 className="font-semibold text-lg mb-4">Dịch vụ của chúng tôi</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="#credit-scoring"
-                  className="text-white/60 hover:text-white text-sm transition-colors"
-                >
-                  Credit Scoring Engine
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#micro-lending"
-                  className="text-white/60 hover:text-white text-sm transition-colors"
-                >
-                  Micro-Lending Solution
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#micro-investment"
-                  className="text-white/60 hover:text-white text-sm transition-colors"
-                >
-                  Micro-Investment Solution
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Legal */}
-          <div>
-            <h4 className="font-semibold text-lg mb-4">Pháp lý &amp; Quyền riêng tư</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="#"
-                  className="text-white/60 hover:text-white text-sm transition-colors"
-                >
-                  Chính sách quyền riêng tư
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-white/60 hover:text-white text-sm transition-colors"
-                >
-                  Điều khoản chung
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-white/60 hover:text-white text-sm transition-colors"
-                >
-                  Điều khoản cấp phép API
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-white/60 hover:text-white text-sm transition-colors"
-                >
-                  Điều khoản cấp phép SDK
-                </Link>
-              </li>
-            </ul>
-          </div>
+          {menuItems.map((section, i) => (
+            <div key={i}>
+              <h3 className="mb-4 font-bold text-white">{section.title}</h3>
+              <ul className="space-y-3 text-white/60">
+                {section.links.map((link, j) => (
+                  <li key={j} className="text-sm font-medium hover:text-white transition-colors">
+                    <Link href={link.url}>{link.text}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
 
-        <div className="border-t border-white/10 mt-12 pt-8 text-center">
-          <p className="text-white/40 text-sm">
-            Copyright &copy; {new Date().getFullYear()} FinOS Technology
-          </p>
+        <div className="mt-16 flex flex-col justify-between gap-4 border-t border-white/10 pt-8 text-sm font-medium text-white/40 md:flex-row md:items-center">
+          <p>Copyright &copy; {new Date().getFullYear()} FinOS Technology. All rights reserved.</p>
+          <ul className="flex gap-4">
+            {bottomLinks.map((link, i) => (
+              <li key={i} className="underline hover:text-white transition-colors">
+                <Link href={link.url}>{link.text}</Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </footer>

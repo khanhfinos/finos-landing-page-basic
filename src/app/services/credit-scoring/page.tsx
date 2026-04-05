@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
 import Image from "next/image";
 import { useState } from "react";
+import PageHero from "@/components/PageHero";
 
 export default function CreditScoringPage() {
   const [activeTab, setActiveTab] = useState<"banks" | "ecosystem">("banks");
@@ -14,31 +15,11 @@ export default function CreditScoringPage() {
       <Navbar />
 
       {/* Hero Banner */}
-      <section className="relative pt-40 pb-28 overflow-hidden bg-gradient-to-br from-[#0a7b8c] via-[#1a8fa0] to-[#2ab5c4]">
-        <svg
-          className="absolute inset-0 w-full h-full"
-          viewBox="0 0 1440 300"
-          preserveAspectRatio="none"
-          fill="none"
-          aria-hidden="true"
-        >
-          <line x1="0" y1="80" x2="720" y2="160" stroke="rgba(255,255,255,0.15)" strokeWidth="1" />
-          <line x1="720" y1="160" x2="1440" y2="60" stroke="rgba(255,255,255,0.15)" strokeWidth="1" />
-          <circle cx="155" cy="80" r="5" fill="rgba(255,255,255,0.6)" />
-          <circle cx="450" cy="120" r="4" fill="rgba(255,255,255,0.5)" />
-          <circle cx="1075" cy="65" r="5" fill="rgba(255,255,255,0.6)" />
-        </svg>
-        <div className="absolute bottom-0 left-0 w-1/2 h-24 bg-[#0d3a45]/40 rounded-tr-[80px]" />
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-            Credit Scoring Engine
-          </h1>
-          <p className="text-white/80 text-lg max-w-2xl mx-auto">
-            FinOS sử dụng machine learning để xử lý dữ liệu truyền thống và hành vi,
-            dự đoán khả năng tín dụng của người vay.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        badge="Sản phẩm"
+        title="Credit Scoring Engine"
+        description="FinOS sử dụng machine learning để xử lý dữ liệu truyền thống và hành vi, dự đoán khả năng tín dụng của người vay."
+      />
 
       {/* Stats + Graphic */}
       <section className="py-20 bg-white">

@@ -78,7 +78,7 @@ export const AccordionFeatureSection = ({
                     </h6>
                   </AccordionTrigger>
                   <AccordionContent>
-                    <p className="mt-3 text-gray-500 leading-relaxed text-base md:text-lg">
+                    <p className="mt-3 text-gray-500 leading-relaxed text-base md:text-lg whitespace-pre-line">
                       {tab.description}
                     </p>
                     {/* Image shown on mobile */}

@@ -36,13 +36,13 @@ const Feature108 = ({
     {
       value: "tab-1",
       icon: <MonitorPlay className="h-auto w-4 shrink-0" />,
-      label: "Demo Portal",
+      label: "eSign Platform",
       content: {
-        badge: "Trải nghiệm trực tiếp",
-        title: "Khám phá luồng ký số toàn trình trên Demo Portal.",
+        badge: "Sandbox miễn phí",
+        title: "Tự tay trải nghiệm quy trình ký số từ đầu đến cuối.",
         description:
-          "Upload tài liệu, thiết lập luồng ký, xác thực danh tính và nhận gói bằng chứng — toàn bộ trong vài phút. Không cần cài đặt, không cần tài khoản.",
-        buttonText: "Trải nghiệm eSign →",
+          "Nền tảng eSign cho phép bạn tải tài liệu lên, định nghĩa thứ tự người ký, chọn phương thức xác thực danh tính và nhận gói bằng chứng hoàn chỉnh — tất cả trong vòng dưới 5 phút. Không cần cài đặt phần mềm, không cần tạo tài khoản, không giới hạn số lần thử.",
+        buttonText: "Trải nghiệm ngay →",
         buttonHref: "/demo-portal/esign",
         videoSrc: "/FinOS_demo_tao_quy_trinh_ky_eSign_Portal.mp4",
         imageSrc:
@@ -55,14 +55,14 @@ const Feature108 = ({
       icon: <ShieldCheck className="h-auto w-4 shrink-0" />,
       label: "Bảo mật & Pháp lý",
       content: {
-        badge: "Tuân thủ pháp lý Việt Nam",
-        title: "Chữ ký số có giá trị pháp lý đầy đủ theo quy định.",
+        badge: "Pháp lý & Bảo mật",
+        title: "Chữ ký số có giá trị pháp lý đầy đủ tại Việt Nam.",
         description:
-          "FinOS eSign tuân thủ Nghị định 130/2018/NĐ-CP về chữ ký số và Luật Giao dịch điện tử 2023. Mọi tài liệu ký đều có timestamp, audit trail và evidence package đủ cơ sở pháp lý khi tranh chấp.",
-        buttonText: "Xem chính sách bảo mật",
+          "FinOS eSign tuân thủ Nghị định 130/2018/NĐ-CP về chữ ký số và Luật Giao dịch điện tử 2023. Mỗi phiên ký được gắn dấu thời gian hợp lệ (RFC 3161), nhật ký thao tác đầy đủ và gói bằng chứng kỹ thuật số — đủ cơ sở để nộp làm bằng chứng khi xảy ra tranh chấp hoặc kiểm toán. Hạ tầng bảo mật đạt chuẩn TLS 1.3, mã hóa dữ liệu khi lưu trữ và phân quyền truy cập theo vai trò.",
+        buttonText: "Liên hệ tư vấn",
         buttonHref: "/contact",
         imageSrc:
-          "/kling_20260403_作品_A_professi_434_0.png",
+          "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&auto=format&fit=crop&q=80",
         imageAlt: "FinOS eSign Security & Compliance",
       },
     },
@@ -71,14 +71,14 @@ const Feature108 = ({
       icon: <FileSignature className="h-auto w-4 shrink-0" />,
       label: "Tính năng nổi bật",
       content: {
-        badge: "Tính năng nổi bật",
+        badge: "Linh hoạt & Toàn diện",
         title: "Ký đúng người, đúng tài liệu, đủ bằng chứng pháp lý.",
         description:
-          "Hỗ trợ 4 phương thức ký: chữ ký tay, OTP, VNeID và USB Token. Tự động tạo gói bằng chứng gồm hợp đồng đã ký, audit trail và timestamp đạt chuẩn pháp lý Việt Nam.",
-        buttonText: "Xem chi tiết tính năng",
+          "Hỗ trợ 4 phương thức xác thực danh tính: chữ ký tay điện tử, OTP qua SMS, VNeID và USB Token PKI. Luồng ký đa người theo thứ tự tuỳ chỉnh, có thể thiết lập thời hạn ký và nhắc nhở tự động. Sau khi hoàn tất, hệ thống tự động tổng hợp gói bằng chứng gồm hợp đồng đã ký, nhật ký thao tác từng bước và dấu thời gian — sẵn sàng lưu trữ hoặc tích hợp về hệ thống nội bộ qua API.",
+        buttonText: "Xem tất cả tính năng",
         buttonHref: "#how-it-works",
         imageSrc:
-          "/kling_20260403_作品_A_clean__m_392_0.png",
+          "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&auto=format&fit=crop&q=80",
         imageAlt: "FinOS eSign Features",
       },
     },

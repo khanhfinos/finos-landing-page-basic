@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { FloatingChatWidget } from "@/components/ui/floating-chat-widget-shadcnui";
+import BackToTop from "@/components/BackToTop";
 
 const spaceGrotesk = localFont({
   variable: "--font-space-grotesk",
@@ -32,6 +33,7 @@ export default function RootLayout({
       <body>
         {children}
         <FloatingChatWidget />
+        <BackToTop />
       </body>
     </html>
   );

@@ -6,6 +6,7 @@ import CTA from "@/components/CTA";
 import { Feature108 } from "@/components/blocks/feature108";
 import { Casestudy5 } from "@/components/ui/casestudy-5";
 import { AccordionFeatureSection } from "@/components/blocks/accordion-feature-section";
+import PageHero from "@/components/PageHero";
 
 // ─── 2. HOW IT WORKS ─────────────────────────────────────────────────────────
 const FEATURED_STEP = {
@@ -13,7 +14,7 @@ const FEATURED_STEP = {
   tags: "BƯỚC 1 / KHỞI ĐẦU",
   title: "Tải tài liệu lên.",
   subtitle: "Tải hợp đồng hoặc tài liệu lên portal hoặc qua API — hỗ trợ PDF, Word và các định dạng phổ biến.",
-  image: "/credit-scoring-graphic-03.png",
+  image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&auto=format&fit=crop&q=80",
   link: "#how-it-works",
 };
 
@@ -53,23 +54,23 @@ const STAKEHOLDERS = [
   {
     id: 1,
     title: "Doanh nghiệp & tổ chức tài chính",
-    image: "/kling_20260403_作品_A_triptych_452_0.png",
+    image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&auto=format&fit=crop&q=80",
     description:
-      "Số hóa toàn bộ quy trình duyệt, ký, xác nhận hồ sơ — không còn giấy tờ, không còn chờ đợi. Rút ngắn thời gian ký hợp đồng từ ngày xuống giờ, giảm 80% chi phí xử lý. Audit trail đầy đủ phục vụ kiểm toán và xử lý tranh chấp.",
+      "Số hóa toàn bộ quy trình duyệt, ký và xác nhận hồ sơ — loại bỏ hoàn toàn thao tác thủ công trên giấy tờ.\n\nRút ngắn thời gian ký hợp đồng từ nhiều ngày xuống chỉ còn vài giờ, giảm đến 80% chi phí xử lý và lưu trữ tài liệu.\n\nMỗi phiên ký được ghi lại đầy đủ trong nhật ký thao tác và gói bằng chứng kỹ thuật số — sẵn sàng phục vụ kiểm toán nội bộ và xử lý tranh chấp pháp lý.",
   },
   {
     id: 2,
     title: "Người ký & khách hàng cuối",
-    image: "/kling_20260403_作品_A_triptych_452_0.png",
+    image: "https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=800&auto=format&fit=crop&q=80",
     description:
-      "Ký mọi lúc, mọi nơi — trên bất kỳ thiết bị nào, không cần cài app, không cần tạo tài khoản. Quy trình xác thực rõ ràng, đơn giản dưới 2 phút. Trải nghiệm ký số mượt mà như ký trực tiếp.",
+      "Ký mọi lúc, mọi nơi — trên điện thoại, máy tính bảng hay laptop, không cần cài thêm bất kỳ ứng dụng nào.\n\nQuy trình xác thực danh tính rõ ràng, trực quan và hoàn thành trong dưới 2 phút. Người ký chỉ cần nhấp vào đường dẫn nhận qua email, không cần đăng ký tài khoản.\n\nGiao diện hướng dẫn từng bước giúp ngay cả người dùng ít quen công nghệ cũng có thể ký số thành công ngay lần đầu.",
   },
   {
     id: 3,
     title: "Đối tác & đội ngũ kỹ thuật",
-    image: "/kling_20260403_作品_A_triptych_452_0.png",
+    image: "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=800&auto=format&fit=crop&q=80",
     description:
-      "REST API + SDK + Webhook — tích hợp vào hệ thống hiện có trong vòng dưới 1 tuần. Multi-tenant, white-label, phân quyền RBAC linh hoạt. Hỗ trợ lộ trình in-house cho tổ chức muốn làm chủ nền tảng hoàn toàn.",
+      "REST API đầy đủ tài liệu, SDK đa ngôn ngữ và Webhook theo thời gian thực — cho phép tích hợp vào hệ thống hiện có trong vòng dưới 1 tuần.\n\nHỗ trợ multi-tenant, white-label theo thương hiệu và phân quyền RBAC linh hoạt theo từng tổ chức.\n\nCung cấp môi trường sandbox để kiểm thử trước khi lên production. Đội ngũ kỹ thuật FinOS hỗ trợ trực tiếp trong suốt quá trình tích hợp và vận hành.",
   },
 ];
 
@@ -80,30 +81,11 @@ export default function ESignSuitePage() {
       <Navbar />
 
       {/* Hero Banner */}
-      <section className="relative pt-40 pb-28 overflow-hidden bg-gradient-to-br from-[#0a7b8c] via-[#1a8fa0] to-[#2ab5c4]">
-        <svg
-          className="absolute inset-0 w-full h-full"
-          viewBox="0 0 1440 300"
-          preserveAspectRatio="none"
-          fill="none"
-          aria-hidden="true"
-        >
-          <line x1="0" y1="80" x2="720" y2="160" stroke="rgba(255,255,255,0.15)" strokeWidth="1" />
-          <line x1="720" y1="160" x2="1440" y2="60" stroke="rgba(255,255,255,0.15)" strokeWidth="1" />
-          <circle cx="155" cy="80" r="5" fill="rgba(255,255,255,0.6)" />
-          <circle cx="450" cy="120" r="4" fill="rgba(255,255,255,0.5)" />
-          <circle cx="1075" cy="65" r="5" fill="rgba(255,255,255,0.6)" />
-        </svg>
-        <div className="absolute bottom-0 left-0 w-1/2 h-24 bg-[#0d3a45]/40 rounded-tr-[80px]" />
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-            FinOS eSignSuite
-          </h1>
-          <p className="text-white/80 text-lg max-w-2xl mx-auto">
-            Ký đúng người · Đúng tài liệu · Đủ bằng chứng pháp lý
-          </p>
-        </div>
-      </section>
+      <PageHero
+        badge="Sản phẩm"
+        title="FinOS eSignSuite"
+        description="Ký đúng người · Đúng tài liệu · Đủ bằng chứng pháp lý"
+      />
 
       {/* ─── 1. WHAT IT IS ──────────────────────────────────────────────────── */}
       <Feature108 />
@@ -128,7 +110,7 @@ export default function ESignSuitePage() {
       />
 
       {/* ─── 4. PARTNER LOGOS ─────────────────────────────────────────────── */}
-      <section className="py-16 bg-white border-t border-gray-100">
+      {/* <section className="py-16 bg-white border-t border-gray-100">
         <div className="max-w-5xl mx-auto px-6">
           <p className="text-center text-xs font-semibold uppercase tracking-widest text-gray-400 mb-10">
             Đối tác & khách hàng tiêu biểu
@@ -160,7 +142,7 @@ export default function ESignSuitePage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <CTA />
       <Footer />

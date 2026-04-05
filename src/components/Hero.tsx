@@ -1,8 +1,16 @@
 import Link from "next/link";
+import ParticleCanvas from "@/components/ui/particle-canvas";
 
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center bg-gradient-to-br from-primary-dark via-primary to-primary-light overflow-hidden">
+      {/* Particle network background */}
+      <ParticleCanvas
+        particleColor="rgba(0, 188, 212, 0.7)"
+        lineColor="rgba(0, 188, 212, {opacity})"
+        lineColorNearMouse="rgba(255, 255, 255, {opacity})"
+        mouseRadius={180}
+      />
       {/* Decorative shapes */}
       <div className="absolute top-20 left-10 w-64 h-64 bg-white/5 rounded-full blur-3xl" />
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
@@ -20,58 +28,58 @@ export default function Hero() {
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
-                href="#credit-scoring"
+                href="/services/esign"
                 className="px-5 py-2.5 bg-accent hover:bg-accent-light text-white font-semibold rounded-lg transition-colors text-sm"
+              >
+                eSignSuite
+              </Link>
+              <Link
+                href="/services/credit-scoring"
+                className="px-5 py-2.5 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-colors border border-white/30 text-sm"
               >
                 Credit Scoring
               </Link>
               <Link
-                href="#micro-lending"
+                href="/contact"
                 className="px-5 py-2.5 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-colors border border-white/30 text-sm"
               >
                 Micro-Lending
               </Link>
               <Link
-                href="#micro-investment"
+                href="/contact"
                 className="px-5 py-2.5 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-colors border border-white/30 text-sm"
               >
                 Micro-Investment
               </Link>
               <Link
-                href="#etms"
+                href="/contact"
                 className="px-5 py-2.5 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-colors border border-white/30 text-sm"
               >
                 eTMS
               </Link>
               <Link
-                href="#econnect"
+                href="/contact"
                 className="px-5 py-2.5 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-colors border border-white/30 text-sm"
               >
                 eConnect
               </Link>
               <Link
-                href="#edocai"
+                href="/contact"
                 className="px-5 py-2.5 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-colors border border-white/30 text-sm"
               >
                 eDocAI
               </Link>
               <Link
-                href="#emeeting"
+                href="/contact"
                 className="px-5 py-2.5 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-colors border border-white/30 text-sm"
               >
                 eMeeting
               </Link>
               <Link
-                href="#ekyc"
+                href="/contact"
                 className="px-5 py-2.5 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-colors border border-white/30 text-sm"
               >
                 eKYC
-              </Link>
-              <Link
-                href="#esignsuite"
-                className="px-5 py-2.5 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-colors border border-white/30 text-sm"
-              >
-                eSignSuite
               </Link>
             </div>
           </div>
