@@ -42,8 +42,8 @@ const Feature108 = ({
         title: "Khám phá luồng ký số toàn trình trên Demo Portal.",
         description:
           "Upload tài liệu, thiết lập luồng ký, xác thực danh tính và nhận gói bằng chứng — toàn bộ trong vài phút. Không cần cài đặt, không cần tài khoản.",
-        buttonText: "Mở Demo Portal",
-        buttonHref: "/demo-portal",
+        buttonText: "Trải nghiệm eSign →",
+        buttonHref: "/demo-portal/esign",
         videoSrc: "/FinOS_demo_tao_quy_trinh_ky_eSign_Portal.mp4",
         imageSrc:
           "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80",
