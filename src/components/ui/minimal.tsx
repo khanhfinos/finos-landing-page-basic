@@ -39,15 +39,15 @@ export default function MinimalModernHero({
   return (
     <section
       className={`relative w-full overflow-hidden ${className}`}
-      style={{ background: "#FFFFFF" }}
+      style={{ background: "#0e1345" }}
     >
       {/* Subtle Grid */}
       <div
         className="absolute inset-0"
         style={{
           backgroundImage: `
-            linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px)
+            linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px)
           `,
           backgroundSize: "100px 100px",
         }}
@@ -128,7 +128,7 @@ export default function MinimalModernHero({
                   animate={{ scale: [1, 1.3, 1] }}
                   transition={{ duration: 2, repeat: Infinity }}
                 />
-                <span className="text-sm font-bold uppercase tracking-wider text-black">
+                <span className="text-sm font-bold uppercase tracking-wider text-white">
                   {badge}
                 </span>
               </motion.div>
@@ -141,7 +141,7 @@ export default function MinimalModernHero({
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6"
-              style={{ color: "#000000", letterSpacing: "-0.03em" }}
+              style={{ color: "#FFFFFF", letterSpacing: "-0.03em" }}
             >
               {title.split(" ").map((word, index, arr) => (
                 <React.Fragment key={index}>
@@ -162,7 +162,7 @@ export default function MinimalModernHero({
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="text-xl md:text-2xl font-semibold mb-4"
-                style={{ color: "#666666" }}
+                style={{ color: "#a0aec0" }}
               >
                 {subtitle}
               </motion.p>
@@ -175,7 +175,7 @@ export default function MinimalModernHero({
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.5 }}
               className="text-lg md:text-xl mb-10"
-              style={{ color: "#555555", lineHeight: "1.7", maxWidth: "680px" }}
+              style={{ color: "#9ab0c8", lineHeight: "1.7", maxWidth: "680px" }}
             >
               {description}
             </motion.p>
@@ -195,7 +195,7 @@ export default function MinimalModernHero({
                     whileHover={{ scale: 1.05, boxShadow: `0 20px 50px ${accentColor}40` }}
                     whileTap={{ scale: 0.95 }}
                     className="px-8 py-4 rounded-2xl font-bold text-base"
-                    style={{ background: accentColor, color: "#000000" }}
+                    style={{ background: accentColor, color: "#FFFFFF" }}
                   >
                     {primaryButton.label}
                   </motion.a>
@@ -203,10 +203,10 @@ export default function MinimalModernHero({
                 {secondaryButton && (
                   <motion.a
                     href={secondaryButton.href}
-                    whileHover={{ scale: 1.05, background: "#F5F5F5" }}
+                    whileHover={{ scale: 1.05, background: "rgba(255,255,255,0.1)" }}
                     whileTap={{ scale: 0.95 }}
                     className="px-8 py-4 rounded-2xl font-bold text-base"
-                    style={{ background: "transparent", color: "#000000", border: "2px solid #E0E0E0" }}
+                    style={{ background: "transparent", color: "#FFFFFF", border: "2px solid rgba(255,255,255,0.3)" }}
                   >
                     {secondaryButton.label}
                   </motion.a>
@@ -227,10 +227,10 @@ export default function MinimalModernHero({
                   <motion.div key={index} whileHover={{ y: -5 }} className="relative">
                     <div className="absolute top-0 left-0 w-8 h-1" style={{ background: accentColor }} />
                     <div className="pt-4">
-                      <div className="text-4xl md:text-5xl font-black mb-1" style={{ color: "#000000" }}>
+                      <div className="text-4xl md:text-5xl font-black mb-1" style={{ color: "#FFFFFF" }}>
                         {stat.value}
                       </div>
-                      <div className="text-xs font-semibold uppercase tracking-wide" style={{ color: "#888888" }}>
+                      <div className="text-xs font-semibold uppercase tracking-wide" style={{ color: "#8fa8c0" }}>
                         {stat.label}
                       </div>
                     </div>

@@ -35,49 +35,49 @@ export default function Hero() {
               </Link>
               <Link
                 href="/services/credit-scoring"
-                className="px-5 py-2.5 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-colors border border-white/30 text-sm"
+                className="px-5 py-2.5 bg-white/20 hover:bg-white/30 text-white font-semibold rounded-lg transition-colors border border-white/40 text-sm"
               >
                 Credit Scoring
               </Link>
               <Link
                 href="/contact"
-                className="px-5 py-2.5 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-colors border border-white/30 text-sm"
+                className="px-5 py-2.5 bg-white/20 hover:bg-white/30 text-white font-semibold rounded-lg transition-colors border border-white/40 text-sm"
               >
                 Micro-Lending
               </Link>
               <Link
                 href="/contact"
-                className="px-5 py-2.5 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-colors border border-white/30 text-sm"
+                className="px-5 py-2.5 bg-white/20 hover:bg-white/30 text-white font-semibold rounded-lg transition-colors border border-white/40 text-sm"
               >
                 Micro-Investment
               </Link>
               <Link
                 href="/contact"
-                className="px-5 py-2.5 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-colors border border-white/30 text-sm"
+                className="px-5 py-2.5 bg-white/20 hover:bg-white/30 text-white font-semibold rounded-lg transition-colors border border-white/40 text-sm"
               >
                 eTMS
               </Link>
               <Link
                 href="/contact"
-                className="px-5 py-2.5 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-colors border border-white/30 text-sm"
+                className="px-5 py-2.5 bg-white/20 hover:bg-white/30 text-white font-semibold rounded-lg transition-colors border border-white/40 text-sm"
               >
                 eConnect
               </Link>
               <Link
                 href="/contact"
-                className="px-5 py-2.5 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-colors border border-white/30 text-sm"
+                className="px-5 py-2.5 bg-white/20 hover:bg-white/30 text-white font-semibold rounded-lg transition-colors border border-white/40 text-sm"
               >
                 eDocAI
               </Link>
               <Link
                 href="/contact"
-                className="px-5 py-2.5 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-colors border border-white/30 text-sm"
+                className="px-5 py-2.5 bg-white/20 hover:bg-white/30 text-white font-semibold rounded-lg transition-colors border border-white/40 text-sm"
               >
                 eMeeting
               </Link>
               <Link
                 href="/contact"
-                className="px-5 py-2.5 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-colors border border-white/30 text-sm"
+                className="px-5 py-2.5 bg-white/20 hover:bg-white/30 text-white font-semibold rounded-lg transition-colors border border-white/40 text-sm"
               >
                 eKYC
               </Link>

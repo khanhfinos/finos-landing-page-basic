@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const menuItems = [
   {
@@ -11,12 +12,15 @@ const menuItems = [
   {
     title: "Sản phẩm",
     links: [
-      { text: "Credit Scoring", url: "#credit-scoring" },
-      { text: "Micro-Lending", url: "#micro-lending" },
-      { text: "Micro-Investment", url: "#micro-investment" },
-      { text: "eTMS", url: "#etms" },
+      { text: "eSignSuite", url: "/services/esign" },
       { text: "eKYC", url: "#ekyc" },
-      { text: "eSignSuite", url: "#esignsuite" },
+      { text: "eTMS", url: "#etms" },
+      { text: "eMeeting", url: "#emeeting" },
+      { text: "eConnect", url: "#econnect" },
+      { text: "eDocAI", url: "#edocai" },
+      { text: "Micro-Investment", url: "#micro-investment" },
+      { text: "Micro-Lending", url: "#micro-lending" },
+      { text: "Credit Scoring", url: "/services/credit-scoring" },
     ],
   },
   {
@@ -49,7 +53,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-2 gap-8 lg:grid-cols-6">
           <div className="col-span-2 mb-8 lg:mb-0">
-            <p className="text-2xl font-bold">FinOS</p>
+            <Image src="/Logo_Blue.png" alt="FinOS" width={120} height={40} className="h-auto" />
             <p className="mt-4 text-white/60 text-sm leading-relaxed max-w-xs">
               FinOS là công ty FinTech cung cấp năng lực cho các sản phẩm &amp; dịch vụ tài chính kỹ thuật số tại Đông Nam Á.
             </p>

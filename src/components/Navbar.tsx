@@ -162,7 +162,7 @@ export default function Navbar() {
               alt="FinOS"
               width={120}
               height={40}
-              className="brightness-0 invert"
+              className="h-auto"
               priority
             />
           </Link>

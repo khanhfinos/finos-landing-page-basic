@@ -16,9 +16,11 @@ export default function Home() {
       <Navbar />
       <Hero />
       <AboutSection />
-      <Gallery4 />
       <WhyFinOS />
-      <Technology />
+      <div className="bg-[#0a0f2e]">
+        <Technology />
+        <Gallery4 />
+      </div>
       <PartnersSection />
       <CTA />
       <Footer />

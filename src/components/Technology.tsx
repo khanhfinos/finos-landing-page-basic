@@ -72,13 +72,13 @@ function AnimatedContainer({ className, delay = 0.1, children }: AnimatedContain
 
 export default function Technology() {
   return (
-    <section className="py-16 md:py-32 bg-background">
+    <section className="py-16 md:py-24 pb-8 md:pb-12 bg-transparent">
       <div className="mx-auto w-full max-w-5xl space-y-8 px-4">
         <AnimatedContainer className="mx-auto max-w-3xl text-center">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-wide text-balance">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-wide text-balance text-white">
             Công nghệ là năng lực cốt lõi của chúng tôi
           </h2>
-          <p className="text-muted-foreground mt-4 text-base tracking-wide text-balance md:text-lg">
+          <p className="text-white/60 mt-4 text-base tracking-wide text-balance md:text-lg">
             Giải pháp công nghệ của FinOS có sẵn dưới dạng 3+1, được thiết kế cho các đối tác
             với các mức độ trưởng thành kỹ thuật số khác nhau.
           </p>

@@ -1,46 +1,16 @@
 import { LogoCloud } from "@/components/ui/logo-cloud-3";
 
 const partnerLogos = [
-  {
-    src: "https://svgl.app/library/visa.svg",
-    alt: "Visa",
-  },
-  {
-    src: "https://svgl.app/library/mastercard.svg",
-    alt: "Mastercard",
-  },
-  {
-    src: "https://svgl.app/library/aws.svg",
-    alt: "Amazon Web Services",
-  },
-  {
-    src: "https://svgl.app/library/microsoft_azure.svg",
-    alt: "Microsoft Azure",
-  },
-  {
-    src: "https://svgl.app/library/google_cloud.svg",
-    alt: "Google Cloud",
-  },
-  {
-    src: "https://svgl.app/library/stripe.svg",
-    alt: "Stripe",
-  },
-  {
-    src: "https://svgl.app/library/twilio.svg",
-    alt: "Twilio",
-  },
-  {
-    src: "https://svgl.app/library/mongodb.svg",
-    alt: "MongoDB",
-  },
-  {
-    src: "https://svgl.app/library/postgresql.svg",
-    alt: "PostgreSQL",
-  },
-  {
-    src: "https://svgl.app/library/redis.svg",
-    alt: "Redis",
-  },
+  { src: "/image-partner/0.-Logo-CTY-Galaxy-Pay-Color.png", alt: "Galaxy Pay" },
+  { src: "/image-partner/Galaxy-Technology-01.png", alt: "Galaxy Technology" },
+  { src: "/image-partner/Logo-AI.png", alt: "AI Partner" },
+  { src: "/image-partner/Logo-GC-2023-Cut.png", alt: "GC Partner" },
+  { src: "/image-partner/Logo-JOY-2023-Cut.png", alt: "JOY Partner" },
+  { src: "/image-partner/Logo-ONE-2023-Cut.png", alt: "ONE Partner" },
+  { src: "/image-partner/Logo_website_01.png", alt: "Partner Logo" },
+  { src: "/image-partner/galaxyholdings-logo.png", alt: "Galaxy Holdings" },
+  { src: "/image-partner/logo-telecom.png", alt: "Telecom Partner" },
+  { src: "/image-partner/logo_1645778839158.png", alt: "FinOS Partner" },
 ];
 
 export default function PartnersSection() {

@@ -45,6 +45,15 @@ const finosProducts: Gallery4Item[] = [
       "https://images.unsplash.com/photo-1555952517-2e8e729e0b44?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
   },
   {
+    id: "etms",
+    title: "eTMS",
+    description:
+      "Hệ thống quản lý giao dịch điện tử toàn diện, tự động hóa luồng xử lý giao dịch, đối soát và báo cáo theo thời gian thực cho các tổ chức tài chính.",
+    href: "/services/esign",
+    image:
+      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+  },
+  {
     id: "emeeting",
     title: "eMeeting",
     description:
@@ -52,15 +61,6 @@ const finosProducts: Gallery4Item[] = [
     href: "/services/esign",
     image:
       "https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-  },
-  {
-    id: "edocai",
-    title: "eDocAI",
-    description:
-      "Giải pháp xử lý tài liệu thông minh ứng dụng AI — OCR, trích xuất dữ liệu và phân loại tài liệu tự động, giảm thiểu thao tác thủ công.",
-    href: "/services/esign",
-    image:
-      "https://images.unsplash.com/photo-1531297484001-80022131f5a1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
   },
   {
     id: "econnect",
@@ -72,13 +72,13 @@ const finosProducts: Gallery4Item[] = [
       "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
   },
   {
-    id: "etms",
-    title: "eTMS",
+    id: "edocai",
+    title: "eDocAI",
     description:
-      "Hệ thống quản lý giao dịch điện tử toàn diện, tự động hóa luồng xử lý giao dịch, đối soát và báo cáo theo thời gian thực cho các tổ chức tài chính.",
+      "Giải pháp xử lý tài liệu thông minh ứng dụng AI — OCR, trích xuất dữ liệu và phân loại tài liệu tự động, giảm thiểu thao tác thủ công.",
     href: "/services/esign",
     image:
-      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+      "https://images.unsplash.com/photo-1531297484001-80022131f5a1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
   },
   {
     id: "micro-investment",
@@ -133,20 +133,15 @@ const Gallery4 = ({
   }, [carouselApi]);
 
   return (
-    <section className="py-24 bg-gradient-to-b from-[#0a0f2e] to-[#0d1a4a]">
+    <section className="pt-8 pb-24 bg-transparent">
       {/* Header căn đều với các section khác */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-10 flex items-end justify-between md:mb-14 lg:mb-16">
-          <div className="flex flex-col gap-4">
-            <span className="text-accent font-semibold text-sm uppercase tracking-widest">
-              Giải pháp
-            </span>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white">
-              {title}
-            </h2>
-            <p className="max-w-xl text-gray-400 text-lg leading-relaxed">{description}</p>
-          </div>
-          <div className="hidden shrink-0 gap-2 md:flex">
+        <div className="mb-10 md:mb-14 lg:mb-16 text-center">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
+            {title}
+          </h2>
+          <p className="mt-4 mx-auto max-w-2xl text-gray-400 text-lg leading-relaxed">{description}</p>
+          <div className="flex justify-center gap-2 mt-6">
             <Button
               size="icon"
               variant="ghost"

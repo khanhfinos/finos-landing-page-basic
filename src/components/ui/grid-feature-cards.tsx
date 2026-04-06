@@ -20,20 +20,20 @@ export function FeatureCard({ feature, className, ...props }: FeatureCardProps) 
   return (
     <div className={cn("relative overflow-hidden p-6", className)} {...props}>
       <div className="pointer-events-none absolute top-0 left-1/2 -mt-2 -ml-20 h-full w-full [mask-image:linear-gradient(white,transparent)]">
-        <div className="from-foreground/5 to-foreground/1 absolute inset-0 bg-gradient-to-r [mask-image:radial-gradient(farthest-side_at_top,white,transparent)] opacity-100">
+        <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-white/0 [mask-image:radial-gradient(farthest-side_at_top,white,transparent)] opacity-100">
           <GridPattern
             width={20}
             height={20}
             x="-12"
             y="4"
             squares={p}
-            className="fill-foreground/5 stroke-foreground/25 absolute inset-0 h-full w-full mix-blend-overlay"
+            className="fill-white/5 stroke-white/15 absolute inset-0 h-full w-full"
           />
         </div>
       </div>
-      <feature.icon className="text-foreground/75 size-6" strokeWidth={1} aria-hidden />
-      <h3 className="mt-10 text-base md:text-lg font-semibold">{feature.title}</h3>
-      <p className="text-muted-foreground relative z-20 mt-2 text-base leading-relaxed">
+      <feature.icon className="text-white/75 size-6" strokeWidth={1} aria-hidden />
+      <h3 className="mt-10 text-base md:text-lg font-semibold text-white">{feature.title}</h3>
+      <p className="text-white/55 relative z-20 mt-2 text-base leading-relaxed">
         {feature.description}
       </p>
     </div>

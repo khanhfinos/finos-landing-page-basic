@@ -106,7 +106,7 @@ export default function CTA() {
         {/* Icon + heading */}
         <div className="flex flex-col items-center gap-4 text-center">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-white">
-            Cách mạng tài chính số
+            Trở thành đối tác của FinOS
           </h2>
           <p className="text-lg text-white/70 max-w-2xl">
             Hiện tại, chúng tôi đang tìm kiếm các tổ chức tài chính và các đối tác trong hệ sinh thái (nhà phân phối sản phẩm) để hợp tác và/hoặc tham gia mạng lưới của chúng tôi, cùng nhau cách mạng hóa ngành tài chính.
