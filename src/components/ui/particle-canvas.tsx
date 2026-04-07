@@ -138,7 +138,7 @@ export default function ParticleCanvas({
             (canvas!.width / 7) * (canvas!.height / 7);
 
           if (distance < threshold) {
-            const opacity = Math.max(0, 1 - distance / 20000);
+            const opacity = Math.max(0, (1 - distance / 20000) * 0.05);
 
             let nearMouse = false;
             if (mouse.x !== null && mouse.y !== null) {

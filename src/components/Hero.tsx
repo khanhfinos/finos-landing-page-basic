@@ -6,7 +6,7 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center bg-gradient-to-br from-primary-dark via-primary to-primary-light overflow-hidden">
       {/* Particle network background */}
       <ParticleCanvas
-        particleColor="rgba(0, 188, 212, 0.7)"
+        particleColor="rgba(0, 188, 212, 0.05)"
         lineColor="rgba(0, 188, 212, {opacity})"
         lineColorNearMouse="rgba(255, 255, 255, {opacity})"
         mouseRadius={180}

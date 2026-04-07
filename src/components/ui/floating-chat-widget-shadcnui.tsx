@@ -12,12 +12,12 @@ import {
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion, type Variants } from "framer-motion";
 import {
-  MessageSquare,
   Send,
   Sparkles,
   User,
   X,
 } from "lucide-react";
+import Image from "next/image";
 import { useCallback, useId, useState } from "react";
 
 interface Agent {
@@ -34,7 +34,7 @@ const AI_AGENTS: Agent[] = [
   {
     id: "finos",
     name: "FinOS AI",
-    role: "Trợ lý tài chính thông minh",
+    role: "Trợ lý thông minh",
     status: "online",
     icon: Sparkles,
     gradient: "from-cyan-500/20 to-teal-500/20",
@@ -117,6 +117,7 @@ export function FloatingChatWidget() {
                 <div className="flex items-center gap-3">
                   <div className="relative">
                     <Avatar className="h-10 w-10 shadow-sm">
+                      <AvatarImage src="/chat-bot.png" alt="FinOS AI" className="object-cover" />
                       <AvatarFallback className={cn("bg-gradient-to-br text-white", currentAgent.solidGradient)}>
                         <AgentIcon className="h-5 w-5" />
                       </AvatarFallback>
@@ -138,7 +139,7 @@ export function FloatingChatWidget() {
                     </h3>
                     <div className="flex items-center gap-1.5">
                       <span className="text-xs text-gray-500">
-                        Trợ lý tài chính thông minh
+                        Trợ lý thông minh
                       </span>
                     </div>
                   </div>
@@ -155,9 +156,10 @@ export function FloatingChatWidget() {
             </div>
 
             {/* Chat Area */}
-            <div className="flex h-[320px] flex-col gap-4 overflow-y-auto p-4 bg-gray-50">
+            <div className="flex h-[460px] flex-col gap-4 overflow-y-auto p-4 bg-gray-50">
               <motion.div variants={messageVariants} className="flex gap-3">
                 <Avatar className="h-8 w-8 shadow-sm">
+                  <AvatarImage src="/chat-bot.png" alt="FinOS AI" className="object-cover" />
                   <AvatarFallback className={cn("bg-gradient-to-br text-white", currentAgent.solidGradient)}>
                     <AgentIcon className="h-4 w-4" />
                   </AvatarFallback>
@@ -168,7 +170,7 @@ export function FloatingChatWidget() {
                   </span>
                   <div className="rounded-2xl rounded-tl-none bg-white px-4 py-2.5 text-sm shadow-sm border border-gray-100 text-gray-700">
                     <p>
-                      Xin chào! Tôi là FinOS AI — trợ lý tài chính thông minh. Tôi có thể giúp bạn tìm hiểu về Credit Scoring, eKYC, eSign và các giải pháp tài chính số của FinOS.
+                      Xin chào! Tôi là FinOS AI 👋 Tôi có thể giúp bạn khám phá các giải pháp như eKYC, eSign, Credit Scoring và nhiều hơn nữa. Bạn đang tìm hiểu điều gì?
                     </p>
                   </div>
                 </div>
@@ -186,7 +188,43 @@ export function FloatingChatWidget() {
                 </Avatar>
                 <div className="flex max-w-[85%] flex-col items-end gap-1">
                   <div className="rounded-2xl rounded-tr-none bg-[#00bcd4] px-4 py-2.5 text-sm text-white shadow-md">
-                    <p>FinOS hỗ trợ tích hợp eKYC như thế nào?</p>
+                    <p>Giải pháp eKYC của FinOS hoạt động như thế nào?</p>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Bot reply */}
+              <motion.div
+                variants={messageVariants}
+                className="flex gap-3"
+              >
+                <Avatar className="h-8 w-8 shadow-sm">
+                  <AvatarImage src="/chat-bot.png" alt="FinOS AI" className="object-cover" />
+                  <AvatarFallback className={cn("bg-gradient-to-br text-white", currentAgent.solidGradient)}>
+                    <AgentIcon className="h-4 w-4" />
+                  </AvatarFallback>
+                </Avatar>
+                <div className="flex max-w-[85%] flex-col gap-1">
+                  <span className="text-xs font-medium text-gray-500">FinOS AI</span>
+                  <div className="rounded-2xl rounded-tl-none bg-white px-4 py-2.5 text-sm shadow-sm border border-gray-100 text-gray-700">
+                    <p>eKYC của FinOS xác thực danh tính người dùng qua CCCD/CMND, nhận diện khuôn mặt & liveness detection theo chuẩn NHNN. Tích hợp nhanh qua REST API — thường chỉ mất 3–5 ngày! 🚀</p>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* User message 2 */}
+              <motion.div
+                variants={messageVariants}
+                className="flex flex-row-reverse gap-3 self-end"
+              >
+                <Avatar className="h-8 w-8 shadow-sm">
+                  <AvatarFallback className="bg-gradient-to-br from-[#00bcd4] to-[#0097a7] text-white">
+                    <User className="h-4 w-4" />
+                  </AvatarFallback>
+                </Avatar>
+                <div className="flex max-w-[85%] flex-col items-end gap-1">
+                  <div className="rounded-2xl rounded-tr-none bg-[#00bcd4] px-4 py-2.5 text-sm text-white shadow-md">
+                    <p>Tôi muốn xem demo thực tế được không?</p>
                   </div>
                 </div>
               </motion.div>
@@ -199,18 +237,38 @@ export function FloatingChatWidget() {
                 className="flex gap-3"
               >
                 <Avatar className="h-8 w-8 shadow-sm">
+                  <AvatarImage src="/chat-bot.png" alt="FinOS AI" className="object-cover" />
                   <AvatarFallback className={cn("bg-gradient-to-br text-white", currentAgent.solidGradient)}>
                     <AgentIcon className="h-4 w-4" />
                   </AvatarFallback>
                 </Avatar>
                 <div className="flex flex-col gap-1">
-                  <div className="rounded-2xl rounded-tl-none bg-white px-4 py-3 shadow-sm border border-gray-100 w-16 flex items-center justify-center gap-1">
-                    <span className="h-1.5 w-1.5 rounded-full bg-foreground/40 animate-bounce [animation-delay:-0.3s]" />
-                    <span className="h-1.5 w-1.5 rounded-full bg-foreground/40 animate-bounce [animation-delay:-0.15s]" />
-                    <span className="h-1.5 w-1.5 rounded-full bg-foreground/40 animate-bounce" />
+                  <div className="rounded-2xl rounded-tl-none bg-white px-4 py-3 shadow-sm border border-gray-100 w-20 flex items-center justify-center gap-1.5">
+                    <span className="h-2 w-2 rounded-full bg-gray-400 animate-bounce [animation-delay:-0.3s]" />
+                    <span className="h-2 w-2 rounded-full bg-gray-400 animate-bounce [animation-delay:-0.15s]" />
+                    <span className="h-2 w-2 rounded-full bg-gray-400 animate-bounce" />
                   </div>
                 </div>
               </motion.div>
+            </div>
+
+            {/* Quick suggestion tags */}
+            <div className="flex gap-2 px-3 py-2 bg-gray-50 border-t border-gray-100 overflow-x-auto scrollbar-none">
+              {[
+                "eKYC là gì?",
+                "Xem demo ngay",
+                "Credit Scoring",
+                "eSign hoạt động thế nào?",
+                "Liên hệ tư vấn",
+              ].map((tag) => (
+                <button
+                  key={tag}
+                  onClick={() => setMessage(tag)}
+                  className="rounded-full border border-cyan-300 bg-white px-3 py-1 text-xs text-cyan-700 transition-colors hover:bg-cyan-50 hover:border-cyan-400 whitespace-nowrap flex-shrink-0"
+                >
+                  {tag}
+                </button>
+              ))}
             </div>
 
             {/* Input Area */}
@@ -243,21 +301,32 @@ export function FloatingChatWidget() {
       </AnimatePresence>
 
       <motion.button
-        whileHover={{ scale: 1.05 }}
+        whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
+        animate={!isOpen ? {
+          x: [0, -70, 70, -55, 55, -30, 30, 0],
+          rotate: [0, -60, 60, -45, 45, -25, 25, 0],
+          scale: [1, 1.4, 1.4, 1.3, 1.3, 1.15, 1.15, 1],
+        } : {}}
+        transition={!isOpen ? {
+          duration: 0.7,
+          repeat: Infinity,
+          repeatDelay: 0.8,
+          ease: "easeInOut",
+        } : {}}
         onClick={toggleOpen}
         className={cn(
-          "cursor-pointer group relative flex h-14 w-14 items-center justify-center rounded-full shadow-2xl transition-all duration-300",
+          "cursor-pointer group relative flex items-center justify-center rounded-full shadow-2xl transition-all duration-300 overflow-hidden",
           isOpen
-            ? "bg-red-500 text-white rotate-90"
-            : "bg-[#00bcd4] text-white hover:bg-[#0097a7] hover:shadow-cyan-500/40"
+            ? "h-14 w-14 bg-red-500 text-white rotate-90"
+            : "h-36 w-36 bg-transparent hover:shadow-cyan-500/40"
         )}
       >
         <span className="absolute inset-0 -z-10 rounded-full bg-inherit opacity-20 blur-xl transition-opacity duration-300 group-hover:opacity-40" />
         {isOpen ? (
           <X className="h-6 w-6 text-white" />
         ) : (
-          <MessageSquare className="h-6 w-6" />
+          <Image src="/chat-bot.png" alt="Chat" fill sizes="144px" className="object-cover" />
         )}
       </motion.button>
     </div>

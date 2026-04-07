@@ -12,7 +12,7 @@ export default function PageHero({ badge, title, description }: PageHeroProps) {
   return (
     <section className="relative pt-40 pb-28 flex items-center bg-gradient-to-br from-primary-dark via-primary to-primary-light overflow-hidden">
       <ParticleCanvas
-        particleColor="rgba(0, 188, 212, 0.7)"
+        particleColor="rgba(0, 188, 212, 0.05)"
         lineColor="rgba(0, 188, 212, {opacity})"
         lineColorNearMouse="rgba(255, 255, 255, {opacity})"
         mouseRadius={180}
